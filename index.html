@@ -22,10 +22,51 @@
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+  <!--
+    - #LOADING SCREEN
+  -->
+
+  <div id="loading-screen">
+    <div class="loading-split">
+      <div class="loading-left"></div>
+      <div class="loading-right">
+        <div class="loaderGame" id="loaderGame">
+          <div class="loaderGame-container">
+            <div class="loaderGame-in" id="loaderGameIn"></div>
+            <div class="loaderGame-ball"></div>
+          </div>
+        </div>
+        <div class="jp-loading-content">
+          <div class="jp-text-container">
+            <div class="jp-main">読み込み中...</div>
+            <div class="jp-sub">システムを起動する</div>
+          </div>
+          <div class="jp-loader">
+            <div class="jp-loader-bar"></div>
+            <div class="jp-loader-percent" id="jpLoadPercent">0%</div>
+          </div>
+        </div>
+        <div class="jp-vertical-text">機・械・の・下・の・機・械</div>
+      </div>
+    </div>
+    <div class="loading-wrap" id="loadingWrap">
+      <div class="loading-hover"></div>
+      <div class="loading-button" id="loadingButton">
+        <div class="loading-container">
+          <div class="loading-content">
+            <div class="loading-content-in">Loading <span id="loadPercent">0%</span></div>
+          </div>
+          <div class="loading-box"></div>
+        </div>
+        <div class="loading-content2"><span>ようこそ</span></div>
+      </div>
+    </div>
+  </div>
 
   <!--
     - #MAIN
@@ -42,13 +83,13 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+          <img src="./assets/images/my-avatar.png" alt="Tom Schidmst Müller" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
+          <h1 class="name" title="Tom Schidmst Müller">Tom Schidmst Müller</h1>
 
-          <p class="title">Web developer</p>
+          <p class="title">独学系エンジニア / Self-taught Engineer</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -74,7 +115,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
+              <a href="mailto:tomkancast@gmail.com" class="contact-link">tomkancast@gmail.com</a>
             </div>
 
           </li>
@@ -128,20 +169,8 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
+            <a href="https://github.com/larvenejafemcoder" class="social-link" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
 
@@ -209,17 +238,30 @@
 
         <section class="about-text">
           <p>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-            I enjoy
-            turning complex problems into simple, beautiful and intuitive designs.
+            君はまだ「正式な職業」が決まっているというより、"独学フルスタック系システムエンジニア候補"みたいな存在。
+            学生・研究者・クリエイター・低レベルオタクが全部混ざった感じ。🐻⚙️
           </p>
 
           <p>
-            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. I created web design for many famous brand companies.
+            多言語を自在に操る独学系エンジニア。英語、ベトナム語、中国語を混ぜながら、自分だけのスタイルを作り上げている。
+            Arch Linux や C++、低レベル技術に強い興味を持ち、システムの内部を探検するのが好き。
+            静かなカフェよりも、少し壊れかけた ThinkPad と深夜のコードの方が落ち着くタイプ。
+          </p>
+
+          <p>
+            美学にもこだわりがあり、日本風ミニマルデザインやアニメ的な空気感を愛している。
+            時々クマの絵文字を使いながら、混沌と哲学を同時に語る不思議な存在。🐻
+            「Kangism」という独自思想を持ち、不確実性の中でも行動し続けることを大切にしている。
+            感情的で繊細なのに、技術への執念はかなりハードコア。
+          </p>
+
+          <p>
+            普通の道より、自分だけの奇妙で創造的なルートを選ぶタイプ。
+            まるで、深夜2時のネオン街でコンパイルを続ける亡霊エンジニアみたいな人。
+          </p>
+
+          <p>
+            「美学と低レベル技術を同時に追いかける、亡霊系セルフメイドエンジニア」🐻💻
           </p>
         </section>
 
@@ -237,15 +279,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
+                <img src="./assets/images/icon-design.svg" alt="code icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
+                <h4 class="h4 service-item-title">Languages</h4>
 
                 <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
+                  C, C++, Python, TypeScript, JavaScript, C#, Java — 多言語を状況に応じて使い分ける。
                 </p>
               </div>
 
@@ -254,14 +295,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                <img src="./assets/images/icon-dev.svg" alt="frontend icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
+                <h4 class="h4 service-item-title">Frontend</h4>
 
                 <p class="service-item-text">
-                  High-quality development of sites at the professional level.
+                  Astro, React, Vite, Bootstrap, Next.js — 日本風ミニマルデザインを追求。
                 </p>
               </div>
 
@@ -270,14 +311,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+                <img src="./assets/images/icon-app.svg" alt="backend icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
+                <h4 class="h4 service-item-title">Backend & Data</h4>
 
                 <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
+                  MongoDB, Git/GitHub, API設計、大量画像データ管理 — 実践的なデータ設計。
                 </p>
               </div>
 
@@ -286,14 +327,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+                <img src="./assets/images/icon-photo.svg" alt="systems icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
+                <h4 class="h4 service-item-title">OS & Systems</h4>
 
                 <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
+                  Arch Linux, Zsh, LazyVim, MSYS2, GCC, VM構築 — 低レベルから環境構築。
                 </p>
               </div>
 
@@ -525,48 +566,46 @@
               <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Education</h3>
+            <h3 class="h3">Learning Journey</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+              <h4 class="h4 timeline-item-title">独学 / Self-Study — Low-Level Systems</h4>
 
-              <span>2007 — 2008</span>
+              <span>Now</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                C, C++, リバースエンジニアリング、組み込み(ESP32)、
+                サイバーセキュリティ — システムの内部を探検し続ける。
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
+              <h4 class="h4 timeline-item-title">Full-Stack Development</h4>
 
-              <span>2006 — 2007</span>
+              <span>Ongoing</span>
 
               <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
+                Astro, React, Next.js, MongoDB, API設計 —
+                フロントエンドからバックエンドまで幅広くカバー。
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">High school of art and design</h4>
+              <h4 class="h4 timeline-item-title">Arch Linux / Dotfiles Crafting</h4>
 
-              <span>2002 — 2004</span>
+              <span>Always</span>
 
               <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
+                Zsh, LazyVim, Window Manager, MSYS2+MinGW, GCC —
+                自分専用の開発環境をゼロから構築し続ける。
               </p>
 
             </li>
@@ -589,42 +628,39 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Creative director</h4>
+              <h4 class="h4 timeline-item-title">Kangism — 独自哲学プロジェクト</h4>
 
-              <span>2015 — Present</span>
+              <span>Incubating</span>
 
               <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
+                "不確実性の中で多重思考しながら実行する"という独自思想。
+                混沌と哲学を同時に語る、奇妙で創造的なルート。
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Art director</h4>
+              <h4 class="h4 timeline-item-title">Arch Dotfiles Project</h4>
 
-              <span>2013 — 2015</span>
+              <span>Maintaining</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                Zsh, LazyVim, keybind, font protocol などを統合した
+                自分専用 Linux 環境。どの端末でも再現可能な universal setup。
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Web designer</h4>
+              <h4 class="h4 timeline-item-title">Nike風シューズデータサイト</h4>
 
-              <span>2010 — 2013</span>
+              <span>In progress</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                数千枚の画像を扱う大規模Webプロジェクト。
+                MongoDB, API, UI設計を研究中。
               </p>
 
             </li>
@@ -642,7 +678,20 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
+                <h5 class="h5">C / C++</h5>
+                <data value="85">85%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">TypeScript / JavaScript</h5>
                 <data value="80">80%</data>
               </div>
 
@@ -655,12 +704,12 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
+                <h5 class="h5">Python</h5>
+                <data value="75">75%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
+                <div class="skill-progress-fill" style="width: 75%;"></div>
               </div>
 
             </li>
@@ -668,25 +717,12 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
+                <h5 class="h5">Arch Linux / Systems</h5>
                 <data value="90">90%</data>
               </div>
 
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
               </div>
 
             </li>
@@ -777,10 +813,10 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                  <img src="./assets/images/showcase-1.png" alt="kangism" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">Kangism</h3>
 
                 <p class="project-category">Web development</p>
 
@@ -795,10 +831,10 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/showcase-2.png" alt="arch dotfiles" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Orizon</h3>
+                <h3 class="project-title">Arch Dotfiles</h3>
 
                 <p class="project-category">Web development</p>
 
@@ -813,10 +849,10 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                  <img src="./assets/images/showcase-3.png" alt="portfolio website" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Fundo</h3>
+                <h3 class="project-title">Portfolio Website</h3>
 
                 <p class="project-category">Web design</p>
 
@@ -831,10 +867,10 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                  <img src="./assets/images/showcase-1.png" alt="nike shoe data" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Brawlhalla</h3>
+                <h3 class="project-title">Nike Shoe Data</h3>
 
                 <p class="project-category">Applications</p>
 
@@ -849,10 +885,10 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                  <img src="./assets/images/showcase-2.png" alt="c documentary" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">DSM.</h3>
+                <h3 class="project-title">C Documentary</h3>
 
                 <p class="project-category">Web design</p>
 
@@ -867,10 +903,10 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                  <img src="./assets/images/showcase-3.png" alt="multilingual persona" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">MetaSpark</h3>
+                <h3 class="project-title">多言語人格</h3>
 
                 <p class="project-category">Web design</p>
 
@@ -885,10 +921,10 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                  <img src="./assets/images/showcase-1.png" alt="linux universal config" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Summary</h3>
+                <h3 class="project-title">Linux Universal Config</h3>
 
                 <p class="project-category">Web development</p>
 
@@ -903,10 +939,10 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                  <img src="./assets/images/showcase-2.png" alt="hackintosh research" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Task Manager</h3>
+                <h3 class="project-title">Hackintosh Research</h3>
 
                 <p class="project-category">Applications</p>
 
@@ -921,10 +957,10 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                  <img src="./assets/images/showcase-3.png" alt="game cracking research" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Arrival</h3>
+                <h3 class="project-title">Game Cracking Research</h3>
 
                 <p class="project-category">Web development</p>
 
